@@ -1,0 +1,1 @@
+* * * * * ubuntu /bin/bash /home/ubuntu/apps/nerdette_homework/repository/run_on_server.sh fab $DEPLOYMENT_TARGET cron_jobs.test >/var/log/nerdette_homework/crontab.log 2>&1
