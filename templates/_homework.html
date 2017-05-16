@@ -1,0 +1,13 @@
+<div id="{{item.id}}" class="item {{loop_cycle}} {{item.person_slug}} {% for verb_slug in item.verbs_slug %}{{verb_slug}} {% endfor %}">
+	<div class="item-wrapper row">
+		<div class="grid-image col-xs-4">
+			{% if item.homework_image %}
+			<img src="assets/bg.gif" data-src="{{item.homework_image}}">
+			{% endif %}
+		</div>
+		<div class="assignment">
+			<span>{{item.person}}'s assignment</span>
+			<h3>{{item.title}}</h3>
+		</div>
+	</div>
+</div>

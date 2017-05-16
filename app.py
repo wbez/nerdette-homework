@@ -13,7 +13,9 @@ import oauth
 import static
 
 from flask import Flask, make_response, render_template
-from render_utils import make_context, smarty_filter, urlencode_filter
+from render_utils import smarty_filter, urlencode_filter
+# Replaces default make_context from render_utils with custom make_context
+from custom_context import make_context 
 from werkzeug.debug import DebuggedApplication
 
 app = Flask(__name__)
