@@ -16,31 +16,32 @@
         <div class="row verbs">
         </div>
         <div id="filters" class="row" data-spy="affix">
-            <div>
+            <div class="col-xs-12">
                 {% for verb in COPY.verbs %}
                 <button class="verb {{verb.slug}} simplebox btn btn-default" data-filter="{{verb.slug}}">{{verb.verb}}</button>
                 {% endfor %}
             </div>
-            <div class="filter-text">
+            <div class="assigners-select col-sm-6">
+                <button class="assigner-btn" type="button" data-toggle="collapse" data-target="#assigner-collapse" aria-expanded="false" aria-controls="assigner-collapse">
+                Pick by assigner
+                </button>
+                <div class="row collapse" id="assigner-collapse">
+                    {% for person in ASSIGNERS %}
+                        {% with %}
+                            {% set loop_cycle = loop.cycle('odd', 'even') %}
+                            {% include '_person.html' %}
+                        {% endwith %}     
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="filter-text col-sm-6">
                 <span class="active-filters"></span>
                 <span class="clear-filters"></span>
             </div>
         </div>
     </div>
 
-    <div class="container-fluid assigners-select">
-        <button class="assigner-btn" type="button" data-toggle="collapse" data-target="#assigner-collapse" aria-expanded="false" aria-controls="assigner-collapse">
-        Pick by assigner
-        </button>
-        <div class="row collapse" id="assigner-collapse">
-            {% for person in ASSIGNERS %}
-                {% with %}
-                    {% set loop_cycle = loop.cycle('odd', 'even') %}
-                    {% include '_person.html' %}
-                {% endwith %}     
-            {% endfor %}
-        </div>
-    </div>
+    
 {% endblock header_content %}
 
 {% block content %}
