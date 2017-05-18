@@ -117,6 +117,12 @@ $( document ).ready(function() {
     });
 
     $('#myModal').on('hidden.bs.modal', function (e) {
+        console.log("Previous was "+previous)
+        
+        if (previous == '') {
+            previous = '_'
+        }
+
         hasher.setHash(previous);
     })
 
