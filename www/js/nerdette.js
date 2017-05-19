@@ -204,11 +204,13 @@ $( document ).ready(function() {
     hasher.initialized.add(handleChanges); //add initialized listener (to grab initial value in case it is already set)
     hasher.init(); //initialize hasher (start listening for history changes)
 
-    $("img").unveil(0,function(){
+    $("img").unveil(200,function(){
         $(this).load(function() {
             $container.isotope('layout');
         });
     });
+
+    // $(window).trigger("lookup");
 
     var test_id="watch-and-or-read-a-handmaid-s-tale"
     // console.log(_.find(ITEMS, function(item) {
