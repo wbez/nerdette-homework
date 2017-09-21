@@ -1,10 +1,28 @@
-<div class="modal-image">
-	<div>
-		<img src="<%= homework_image %>">
-		<p class="image-credit"><%= homework_image_credit %></p>
-	</div>
+<div class="modal-body">
+<div class="container-fluid">
+<div class="row align-items-center">
+
+<div class="modal-image col-sm-6">
+	
+
+		<% if (verbs == "Do") { %>
+		<img src="http://images.gr-assets.com/books/1489652243l/38447.jpg">
+		<% } %>
+
+		<% if (verbs == "Read") { %>
+		<img src="https://c1.staticflickr.com/5/4021/4446362442_6f982bfcfd_b.jpg">
+		<% } %>
+
+		<% if (verbs == "Listen") { %>
+		<img src="http://bit.ly/2oQKsDX">
+		<% } %>
+
+		<% if (verbs == "Watch") { %>
+		<img src="https://images.gr-assets.com/books/1386803701l/19161852.jpg">
+		<% } %>
+
 </div>
-<div class="modal-description">
+<div class="modal-description col-sm-6">
 	<div>
 		<div class="row modal-assignment">	
 	  		<div><span class="modal-title"><%= title %></span></div>
@@ -13,7 +31,6 @@
 		<div class="row modal-assigner">
 			<div class="assigner-image">
 				<img src="<%= assigner_image %>">
-				<% if (assigner_image_credit) { %><p class="image-credit">Image: <%= assigner_image_credit %></p><% } %>
 			</div>
 			
 			<div class="modal-person-container">
@@ -21,6 +38,10 @@
 				<div class="modal-person-title"><%= person_title %></div>
 				<div class="hear"><a href="<%= episode %>"><i class="fa fa-headphones" aria-hidden="true"></i> Hear the interview</a></div>
 			</div>
+			<% if (assigner_image_credit) { %><p class="image-credit">Image: <%= assigner_image_credit %></p><% } %>
 		</div>
 	</div>
+</div>
+</div>
+</div>
 </div>
