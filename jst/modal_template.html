@@ -1,12 +1,8 @@
-<div class="modal-body">
-<div class="container-fluid">
-<div class="row align-items-center">
-
-<div class="modal-image col-sm-6">
-	
-
+<div class="modal-image">
+	<div>
+		
 		<% if (verbs == "Do") { %>
-		<img src="https://cdn.wbez.org/image/eb51057e08ab7cf99db00eb6d058ea72>
+		<img src="https://cdn.wbez.org/image/eb51057e08ab7cf99db00eb6d058ea72">
 		<% } %>
 
 		<% if (verbs == "Read") { %>
@@ -20,9 +16,9 @@
 		<% if (verbs == "Watch") { %>
 		<img src="https://cdn.wbez.org/image/19b8ad44e3b10cfdbc31f27cc97bcd45">
 		<% } %>
-
+	</div>
 </div>
-<div class="modal-description col-sm-6">
+<div class="modal-description">
 	<div>
 		<div class="row modal-assignment">	
 	  		<div><span class="modal-title"><%= title %></span></div>
@@ -31,6 +27,7 @@
 		<div class="row modal-assigner">
 			<div class="assigner-image">
 				<img src="<%= assigner_image %>">
+				<% if (assigner_image_credit) { %><p class="image-credit">Image: <%= assigner_image_credit %></p><% } %>
 			</div>
 			
 			<div class="modal-person-container">
@@ -38,10 +35,6 @@
 				<div class="modal-person-title"><%= person_title %></div>
 				<div class="hear"><a href="<%= episode %>"><i class="fa fa-headphones" aria-hidden="true"></i> Hear the interview</a></div>
 			</div>
-			<% if (assigner_image_credit) { %><p class="image-credit">Image: <%= assigner_image_credit %></p><% } %>
 		</div>
 	</div>
-</div>
-</div>
-</div>
 </div>
