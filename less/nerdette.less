@@ -6,10 +6,30 @@ body, h1, h2, h3 {
 
 .container-fluid .row {
 	margin:0;
+	
+
+}
+
+.decoration {
+
+	.make-md-column(8);
+	.make-md-column-offset(2);
+	padding:5% 0 0 0;
+
+
+	img {
+		.img-responsive();
+		.center-block();
+	}
 }
 
 .headline-container {
-	// background-color: #72A2A9;
+	// background-color: blue;
+	/*background-image: url("http://cdn.designbeep.com/wp-content/uploads/2013/04/18.lined-paper-texture.jpg");*/
+	/*background-image: url("https://cdn.wbez.org/image/fff65538830c4262f08ed5fb0b43a14d");*/
+
+	
+
 }
 
 .headline {
@@ -18,12 +38,31 @@ body, h1, h2, h3 {
 		-webkit-text-shadow: 2px 2px 2px #999;
 	    -moz-text-shadow:    2px 2px 2px #999;
 	    text-shadow:         2px 2px 2px #999;
+	    .text-center();
+	    margin:0px;
+
 	}
 
 	.title {
-		.make-md-column(4);
-		.make-md-column-offset(4);
+		.make-md-column(8);
+		.make-md-column-offset(2);
+		padding:5px 10px;
+		background: rgba(255,255,255, 0.6);
 	}
+
+	p {
+		font-family: Source Sans Pro, sans-serif;
+    	font-size: 1em;
+    	line-height: 1.7em;
+    	font-weight: 400;
+    	margin: 0 10%;
+    	.text-center();
+	}
+
+}
+
+#topper-large{
+	display:none;
 }
 
 .assigners-select {
@@ -63,8 +102,8 @@ body, h1, h2, h3 {
 		font-size: 1.25em;
 
 		&.person-title {
-			font-family: "Source Sans Pro",Arial, sans-serif;
-			font-size: 0.75em;
+			font-family: "Source Sans Pro", Arial sans-serif;
+			font-size: 1em;
 			line-height: 1em;
 			color: #333;
 		}
@@ -102,14 +141,15 @@ body, h1, h2, h3 {
 	.assignment {
 		.make-xs-column(8);
 
+		padding-top:20px;
+
 		span {
-			text-transform: uppercase;
-			font-family: Arial,sans-serif;
+			font-family: Source Sans Pro,sans-serif;
+			font-weight:300;
 		}
 
 		h3 {
 			margin: 0;
-			font-weight: 700;
 		}
 	}
 
@@ -123,7 +163,9 @@ body, h1, h2, h3 {
 	.grid-image {
 		margin: 0;
 		padding: 0;
+
 	}
+
 
 	&:hover {
 		opacity: 1;
@@ -132,6 +174,8 @@ body, h1, h2, h3 {
 	img {
 		.center-block();
 		.img-responsive();
+		.img-circle()
+
 	}
 
 	.assigner {	
@@ -305,7 +349,7 @@ body, h1, h2, h3 {
 	font-family: "Source Sans Pro", Arial, sans-serif;
 
 	.row {
-		margin: 0
+		margin: 0;
 	}
 
 	.close {
@@ -316,17 +360,28 @@ body, h1, h2, h3 {
 	}
 
 	.modal-dialog {
+<<<<<<< HEAD
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		height: 90vh;
+=======
+		width: 50vw;
+		// height:90vh;
+		margin: auto;
+		padding: 0;
+>>>>>>> jumbotron-design
 	}
 
 	.modal-body {
 		margin: 0;
+<<<<<<< HEAD
 		padding: 0;
 		display: flex;
 		width: 90vw;
+=======
+		padding: 10%;
+>>>>>>> jumbotron-design
 	}
 
 	.modal-content {
@@ -336,15 +391,31 @@ body, h1, h2, h3 {
 	}
 
 	.modal-image{
+
+		/*
 		.make-sm-column(6);
 		padding: 15px 15px 0px 15px;
+
+		background-color:blue;
+		max-height: 500px;
+		*/
 
 		img {
 			.img-responsive();
 			display:block;
     		margin:auto;
-			max-height: 50vh
+			max-height: 45vh
 		}
+<<<<<<< HEAD
+=======
+		
+		/*
+		.vertical-helper {
+			display: inline-block;
+    		height: 100%;
+    		vertical-align: middle;
+		}
+>>>>>>> jumbotron-design
 
 		@media (min-width: 768px) {
 			float: left;
@@ -362,20 +433,21 @@ body, h1, h2, h3 {
 			}
 
 		}
+*/
 	}
 
 	.image-credit {
 		text-align: left;
-		padding-left: 15px;
 		font-family:'Source Sans Pro', Arial, sans-serif;
 		font-size: 11px;
 		font-style: italic;
+		margin-bottom:-5px;
 	}
-
+/*
 	.modal-description {
 		.make-sm-column(6);
-		padding-left: 0;
-		margin: 20px 0;
+		padding: 8%;
+		margin: 0;
 		
 		@media (min-width: 768px) {
 
@@ -389,14 +461,14 @@ body, h1, h2, h3 {
 			// overflow-y: scroll;
 		}
 	}
-
+*/
 	.modal-assignment {
 
 		.modal-title {
 			background-color: #fff;
 			font-family:'Amatic SC', cursive;
 			text-transform: uppercase;
-			padding: 5px 10px 5px 10%;
+			padding: 5px 10px 5px 5px;
 			font-size: 2em;
 			box-decoration-break: clone;
 			-webkit-box-decoration-break: clone;
@@ -404,12 +476,13 @@ body, h1, h2, h3 {
 
 		.modal-text {
 			font-family: "Source Sans Pro", Arial, sans-serif;
-			padding: 10px 10%;
+			padding: 10px 0;
 		}
 	}
 
 	.modal-assigner {
-		padding: 5px 10%;
+		padding: 10px 10% 10px 5%;
+		border-radius:5px; 
 		
 		.assigner-image{
 			.make-xs-column(5);
@@ -420,6 +493,7 @@ body, h1, h2, h3 {
 		img {
 			.img-circle();
 			max-width: 100%;
+			vertical-align: middle;
 		}
 
 		.modal-person-container {
@@ -430,6 +504,7 @@ body, h1, h2, h3 {
 		.modal-person {
 			font-size: 1.5em;
 			font-weight: 700;
+			line-height: 1.2em;
 			color:#5ac4de;
 			text-transform: uppercase;
 			font-family: "Source Sans Pro", Arial, sans-serif;
@@ -440,21 +515,21 @@ body, h1, h2, h3 {
 }
 
 @media (min-width: 768px) {
+    
 
-	.meta {
+    .container-fluid {
+    	margin: 0;
+    }
+    .meta {
 		text-align:left;
 	}
 
 	.headline {
-		padding:10% 0 0 0;
+		background-attachment: fixed;
 	}
 
 	.players-control {
 		display:none;
-	}
-
-	.headline {
-		background-attachment: fixed;
 	}
 
 	.date {
@@ -475,5 +550,13 @@ body, h1, h2, h3 {
 	.quote {
 		line-height:48px;
 		margin-bottom:10px;
+	}
+
+	#topper-large {
+		display:block;
+	}
+
+	#topper-small {
+		display:none;
 	}
 }

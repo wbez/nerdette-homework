@@ -2,24 +2,36 @@
 
 {% block header_content %}
     <div class="container-fluid headline-container">
-        <div class="row headline">
-            <div class="title">
-                <h1 class="text-center">{{ COPY.content.headline|smarty }}</h1>
-                <p>{{ COPY.content.subhed|smarty }}</p>
+         
+         <div class="row illustrations">
+            <div class="decoration animated bounceIn">
+                 <img id="topper-large" src="https://cdn.wbez.org/image/2383f82b0a7eb9bf7fdd70228d208a94">
+                 <img id="topper-small" src="https://cdn.wbez.org/image/7bcc209cff16cec4d088d7188939547e">
             </div>
         </div>
+        <div class="row headline">
+            <div class="title">
+                
+                <h1>{{ COPY.content.headline|smarty }}</h1>
+                <div class="subhed">
+                <p> {{ COPY.content.subhed|smarty }}</p>
+                </div>
+
+            </div>
         <div class="row byline">
             <!-- &bull; Curated by <a href="https://nerdettepodcast.com">Tricia Bobeda and Greta Johnsen</a> &bull; -->
         </div>
     </div>
+    </div>
     <div class="container-fluid">
         <div class="row verbs">
-        </div>
         <div id="filters" class="row" data-spy="affix">
             <div class="col-xs-12">
                 {% for verb in COPY.verbs %}
                 <button class="verb {{verb.slug}} simplebox btn btn-default" data-filter="{{verb.slug}}">{{verb.verb}}</button>
                 {% endfor %}
+            </div>
+            </div>
             </div>
             <div class="assigners-select col-sm-6">
                 <button class="assigner-btn" type="button" data-toggle="collapse" data-target="#assigner-collapse" aria-expanded="false" aria-controls="assigner-collapse">
@@ -40,6 +52,7 @@
             </div>
         </div>
     </div>
+
 
     
 {% endblock header_content %}

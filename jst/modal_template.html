@@ -1,7 +1,21 @@
 <div class="modal-image">
 	<div>
-		<img src="<%= homework_image %>">
-		<p class="image-credit"><%= homework_image_credit %></p>
+		
+		<% if (verbs == "Do") { %>
+		<img src="https://cdn.wbez.org/image/eb51057e08ab7cf99db00eb6d058ea72">
+		<% } %>
+
+		<% if (verbs == "Read") { %>
+		<img src="https://cdn.wbez.org/image/4d3f8dff419670c56e4d74f5077eacb0">
+		<% } %>
+
+		<% if (verbs == "Listen") { %>
+		<img src="https://cdn.wbez.org/image/e0c4d579479f6a065f6a0e5acbcbf0a4">
+		<% } %>
+
+		<% if (verbs == "Watch") { %>
+		<img src="https://cdn.wbez.org/image/19b8ad44e3b10cfdbc31f27cc97bcd45">
+		<% } %>
 	</div>
 </div>
 <div class="modal-description">

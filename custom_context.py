@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 """
-Functions specific to the Grading Rahm app.
+Functions specific to the Nerdette Homework app.
 """
 
 import copytext
@@ -29,6 +29,7 @@ def make_context(asset_depth=0):
 	copy = copytext.Copy(app_config.COPY_PATH)
 
 	items = copy['assignments']
+	#verbs = copy['verbs']
 
 	# for item in items:
 	# 	date_obj = datetime.strptime(item['date'],'%m/%d/%Y')
@@ -68,6 +69,7 @@ def make_context(asset_depth=0):
 		item_context['date_obj'] = date_obj
 
 		assigner_context = {}
+		#verbs_context = {}
 		
 		# if i == 0:
 		# 	timeline_value = 100*( (date_obj-start).days/float(days_count) )
@@ -104,6 +106,8 @@ def make_context(asset_depth=0):
 		assigner_context['assigner_image'] = item['assigner image']
 		assigner_context['assigner_image_credit'] = item['assigner image credit']
 		assigner_context['person_title'] = item['person_title']
+
+		#verbs_context['verbs_modal_image'] = item['modal image']
 
 		context['ITEMS'].append(item_context)
 		context['ITEMS_JS'].append(item_context.copy())

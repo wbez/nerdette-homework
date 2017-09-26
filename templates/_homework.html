@@ -1,13 +1,13 @@
 <div id="{{item.id}}" class="item {{item.person_slug}} {% for verb_slug in item.verbs_slug %}{{verb_slug}} {% endfor %}">
 	<div class="item-wrapper row">
 		<div class="grid-image col-xs-4">
-			{% if item.homework_image %}
-			<img src="assets/bg.gif" data-src="{{item.homework_image}}">
+			{% if item.assigner_image %}
+			<img src="assets/bg.gif" data-src="{{item.assigner_image}}">
 			{% endif %}
 		</div>
 		<div class="assignment">
-			<span>{{item.person}}'s assignment</span>
-			<h3>{{item.title}}</h3>
+			<h3> <b>{{item.person}}'s </b> assignment</h3>
+			<span>{{item.title}}</span>
 		</div>
 	</div>
 </div>
