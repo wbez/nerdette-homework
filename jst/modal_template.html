@@ -1,4 +1,6 @@
+
 <div class="modal-image">
+
 	<div>
 		
 		<% if (verbs == "Do") { %>
@@ -17,24 +19,35 @@
 		<img src="https://cdn.wbez.org/image/19b8ad44e3b10cfdbc31f27cc97bcd45">
 		<% } %>
 	</div>
-</div>
-<div class="modal-description">
+	
+</div> 
+<div class="row modal-description">
 	<div>
+
 		<div class="row modal-assignment">	
 	  		<div><span class="modal-title"><%= title %></span></div>
-	  		<div class="modal-text"><%= text %>!</div>
+	  		
+	  		<div class="modal-text">
+	  		<i class="fa fa-quote-left fa-pull-left fa-3x" aria-hidden="true"></i>
+	  		<%= text %></div>
 		</div>
-		<div class="row modal-assigner">
-			<div class="assigner-image">
-				<img src="<%= assigner_image %>">
-				<% if (assigner_image_credit) { %><p class="image-credit">Image: <%= assigner_image_credit %></p><% } %>
-			</div>
+
+		<div class="modal-assigner-container">
+			<div class="row modal-assigner">
+				<div class="assigner-image">
+					<img src="<%= assigner_image %>">
+				</div>
 			
-			<div class="modal-person-container">
-				<div class="modal-person"><%= person %></div>
-				<div class="modal-person-title"><%= person_title %></div>
-				<div class="hear"><a href="<%= episode %>"><i class="fa fa-headphones" aria-hidden="true"></i> Hear the interview</a></div>
+				<div class="modal-person-container">
+					<div class="modal-person"><%= person %></div>
+					<div class="modal-person-title"><%= person_title %></div>
+					<div class="hear"><a href="<%= episode %>"><i class="fa fa-headphones" aria-hidden="true"></i> Hear the interview</a></div>
+					<div class="row assigner-image-credit">
+						<% if (assigner_image_credit) { %><p class="image-credit">Image: <%= assigner_image_credit %></p><% } %>
+					</div>
+				</div>
+				
 			</div>
-		</div>
 	</div>
 </div>
+

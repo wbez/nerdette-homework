@@ -4,10 +4,10 @@ body, h1, h2, h3 {
 	font-family:'Amatic SC', cursive;
 }
 
+
+
 .container-fluid .row {
 	margin:0;
-	
-
 }
 
 .decoration {
@@ -23,13 +23,8 @@ body, h1, h2, h3 {
 	}
 }
 
-.headline-container {
-	// background-color: blue;
-	/*background-image: url("http://cdn.designbeep.com/wp-content/uploads/2013/04/18.lined-paper-texture.jpg");*/
-	/*background-image: url("https://cdn.wbez.org/image/fff65538830c4262f08ed5fb0b43a14d");*/
-
-	
-
+#topper-large {
+	display:none;
 }
 
 .headline {
@@ -59,10 +54,6 @@ body, h1, h2, h3 {
     	.text-center();
 	}
 
-}
-
-#topper-large{
-	display:none;
 }
 
 .assigners-select {
@@ -152,8 +143,6 @@ body, h1, h2, h3 {
 			margin: 0;
 		}
 	}
-
-	opacity: 0.75;
 
 	.item-wrapper {
 		// border: 1px solid #999;
@@ -349,8 +338,9 @@ body, h1, h2, h3 {
 	font-family: "Source Sans Pro", Arial, sans-serif;
 
 	.row {
-		margin: 0;
-	}
+			margin:0;
+		}
+	
 
 	.close {
 		position: absolute;
@@ -360,28 +350,16 @@ body, h1, h2, h3 {
 	}
 
 	.modal-dialog {
-<<<<<<< HEAD
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		height: 90vh;
-=======
-		width: 50vw;
-		// height:90vh;
-		margin: auto;
-		padding: 0;
->>>>>>> jumbotron-design
+
+		display: block;
+		/*width: 97vw;
+		height:97vh;*/
 	}
 
 	.modal-body {
 		margin: 0;
-<<<<<<< HEAD
-		padding: 0;
-		display: flex;
-		width: 90vw;
-=======
-		padding: 10%;
->>>>>>> jumbotron-design
+		padding:10% 5%;
+		display: block;
 	}
 
 	.modal-content {
@@ -402,12 +380,10 @@ body, h1, h2, h3 {
 
 		img {
 			.img-responsive();
-			display:block;
-    		margin:auto;
-			max-height: 45vh
+			max-height: 30vh;
+			margin:auto;
+			padding-bottom: 5%;
 		}
-<<<<<<< HEAD
-=======
 		
 		/*
 		.vertical-helper {
@@ -415,7 +391,6 @@ body, h1, h2, h3 {
     		height: 100%;
     		vertical-align: middle;
 		}
->>>>>>> jumbotron-design
 
 		@media (min-width: 768px) {
 			float: left;
@@ -443,26 +418,15 @@ body, h1, h2, h3 {
 		font-style: italic;
 		margin-bottom:-5px;
 	}
-/*
+
 	.modal-description {
-		.make-sm-column(6);
-		padding: 8%;
+		padding: 0;
 		margin: 0;
-		
-		@media (min-width: 768px) {
-
-			div {
-				margin: auto;
-			}
-
-			display: flex;
-			overflow-y: scroll;
-			// height: 90vh;
-			// overflow-y: scroll;
-		}
 	}
-*/
+
 	.modal-assignment {
+
+	
 
 		.modal-title {
 			background-color: #fff;
@@ -475,30 +439,46 @@ body, h1, h2, h3 {
 		}
 
 		.modal-text {
-			font-family: "Source Sans Pro", Arial, sans-serif;
-			padding: 10px 0;
+			font-family: 'Source Sans Pro', sans-serif;
+			padding: 25px 0;
+			font-size:1em;
+
+		}
+
+		.fa-3x {
+			font-size: 2.5em;
+    		background-color: #fff;
+    		padding: 15px;
+    		border-radius: 50%;
+    		margin: 0 30px 5px 0;
 		}
 	}
 
-	.modal-assigner {
-		padding: 10px 10% 10px 5%;
-		border-radius:5px; 
-		
+.modal-assigner-container {
+		padding: 5% 0;
+		/*border-top: .5px black solid;
+		border-bottom: .5px black solid;*/
+		width:50vw;
+		margin:auto;
+
 		.assigner-image{
-			.make-xs-column(5);
-			.make-sm-column(4);
-			padding: 0;
+			.make-sm-column(3);
+			margin:auto;
+			padding:0;			
 		}
 
 		img {
 			.img-circle();
-			max-width: 100%;
-			vertical-align: middle;
+			.img-responsive();
+			max-height: 20vh;
+			margin:auto;
+			padding-bottom:10px;
+
 		}
 
 		.modal-person-container {
-			.make-xs-column(7);
-			.make-sm-column(8);
+			.make-sm-column(9);
+			
 		}
 
 		.modal-person {
@@ -509,9 +489,14 @@ body, h1, h2, h3 {
 			text-transform: uppercase;
 			font-family: "Source Sans Pro", Arial, sans-serif;
 		}
-	}
+		.assigner-image-credit{
+			.make-xs-column(12);
+			margin:0;
+			padding:10px 0 0 0;;
 
-	
+		}
+
+	}
 }
 
 @media (min-width: 768px) {
@@ -536,6 +521,11 @@ body, h1, h2, h3 {
 		text-align: right;
 	}
 
+	.modal-dialog {
+		height:50vh;
+	}
+
+
 	#filters {
 		z-index:99;
 
@@ -559,4 +549,5 @@ body, h1, h2, h3 {
 	#topper-small {
 		display:none;
 	}
+
 }
